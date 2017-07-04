@@ -1,0 +1,14 @@
+{
+  "repository": {
+    "url": "git@github.com:lafourchette/tutorial-plugin.git",
+    "tag": "v0.0.1"
+  },
+  "caption": "Tutorial",
+  "noLink": true,
+  "icon": "gear",
+  "path": "/tutorial",
+  "api_url": {
+    "fetchTutorial": "/tutorial/:id"
+  }
+}
+
