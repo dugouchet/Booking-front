@@ -1,7 +1,5 @@
 import React, { PropTypes } from 'react';
 
-import connect from '../../connectors/Counter';
-
 import styles from './styles';
 
 const Counter = ({ counter, incrementCounter }) => (
@@ -15,4 +13,4 @@ Counter.propTypes = {
   incrementCounter: PropTypes.func,
 };
 
-export default connect(Counter);
+export default Counter;

@@ -4,7 +4,7 @@ import { Route, IndexRoute } from 'react-router';
 import config from './utils/config';
 
 import Component from './index';
-import Counter from './components/Counter';
+import Counter from './containers/Counter';
 
 export default (
   <Route key={config.path} path={config.path} component={Component}>
