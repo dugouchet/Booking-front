@@ -1,37 +1,23 @@
 import React, { PropTypes } from 'react';
 
 import styles from './styles';
+import Customer from './../../containers/Customer';
+import CancelReservation from './../CancelReservation';
 
-class Reservation extends React.Component {
-  state = {
-    isOpen: 'blablabla',
-    bidule: 'bidule'
-  };
-changeColor = () => {
-  this.setState({
-    isOpen: 'nouveau blabla'
-  },()=> {
-    console.log('je suis à jour')
-  });
-};
+const fesses = ({ reservations }) => (
+    <div>
+      {
+        reservations.map(function (reservation) {
+          return (
+            <div key={reservation.id} className={styles.wrap}>
+              {reservation.attributes.mealDate}
+              <Customer customerId={reservation.relationships.customer.data.id}/>
+              <CancelReservation onSubmit={(values)=>console.log('paff', values)}/>
+            </div>
+          )
+        })
+      }
+    </div>
+);
 
-  render (props) {
-    {JSON.stringify(props)}
-    const { changeColor} = this.props;
-    return (
-      <div className={styles.wrap}>
-        <div className="box" onClick={changeColor}>
-
-          je suis bar, {this.state.isOpen}
-        </div>
-      </div>
-    )
-  }
-}
-
-Reservation.propTypes = {
-  changeColor: PropTypes.func,
-  color: PropTypes.string,
-};
-
-export default Reservation;
+export default fesses;

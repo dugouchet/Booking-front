@@ -14,7 +14,7 @@ class Reservation extends Component {
   render () {
     console.log('this.props.reservations', this.props.reservations);
     return <div>
-      {this.props.reservations.length && <ReservationComponent/>}
+      {this.props.reservations.length && <ReservationComponent reservations={this.props.reservations}/>}
       {!this.props.reservations.length && 'sorry no reservation'}
       {JSON.stringify(this.props.error)}
     </div>
