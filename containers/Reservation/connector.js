@@ -1,16 +1,14 @@
 import { connect } from 'react-redux';
 
-// import { changeColorAction } from '../../modules/Fesses/actions';
+import { getReservation } from '../../modules/reservation/actions';
 
 const mapStateToProps = (state) => ({
-  color: state.tutorial.color,
+  reservations: state.reservations.reservation.list,
+  error: state.reservations.reservation.error,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  changeColor: () => dispatch({
-    type: "mon_super_type",
-    payload: "hello"
-  }),
+  getReservation: () => dispatch(getReservation()),
 });
 
 export default (Container) => connect(

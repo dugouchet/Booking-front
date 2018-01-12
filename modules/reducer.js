@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import counter from './counter/reducer';
+import reservation from './reservation/reducer';
 
 export default {
-  tutorial: combineReducers({
-    counter,
+  reservations: combineReducers({
+    reservation,
   })
 };

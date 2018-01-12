@@ -6,7 +6,7 @@
   "caption": "Tutorial",
   "noLink": true,
   "icon": "gear",
-  "path": "/tutorial",
+  "path": "/reservations",
   "api_url": {
     "fetchTutorial": "/tutorial/:id"
   }

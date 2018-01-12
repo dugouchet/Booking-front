@@ -1,9 +1,8 @@
 import React, { PropTypes } from 'react';
 
 import styles from './styles';
-import Foo from './../Foo';
 
-class Fesses extends React.Component {
+class Reservation extends React.Component {
   state = {
     isOpen: 'blablabla',
     bidule: 'bidule'
@@ -30,18 +29,9 @@ changeColor = () => {
   }
 }
 
-ReservationReservation.propTypes = {
+Reservation.propTypes = {
   changeColor: PropTypes.func,
   color: PropTypes.string,
 };
-
-// const toto = (props) => (s
-//   <div className={styles.wrap}>
-//   <Foo> 3</Foo>
-//   </div>
-//
-// );
-
-
 
 export default Reservation;
